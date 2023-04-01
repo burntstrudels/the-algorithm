@@ -53,7 +53,8 @@ def parse_d6w_config(argv=None):
     help="--use_gpu=yes if you want to use GPU during index building",
   )
 
-  known_args, unknown_args = parser.parse_known_args(argv)
+ known_args, unknown_args = parser.parse_known_args(argv or None)
+
   d6w_config = vars(known_args)
   d6w_config["gpu"] = d6w_config["gpu"].lower() == "yes"
   d6w_config["metric"] = parse_metric(d6w_config)
