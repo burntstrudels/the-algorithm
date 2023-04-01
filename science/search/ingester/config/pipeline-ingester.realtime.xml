@@ -47,7 +47,7 @@ to index. -->
 
   <!-- Parse to TwitterMessage -->
   <stage
-      className="com.twitter.search.ingester.pipeline.twitter.ThriftTweetParserStage"
+      className="com.twitter.search.ingester.pipeline.twitter.TextFeatureExtractionWorkersStage"
       tweetCreateEventBranchNames="kafka_retweet_and_reply"
       tweetDeleteEventBranchNames="kafka_update_events_delete"
       driverFactoryId="kafka"/>
